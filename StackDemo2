@@ -1,0 +1,43 @@
+package myFirstPackage;
+
+import java.util.Collections;
+import java.util.Stack;
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+	// Last-in-First-out (LIFO), note: Top of the stack is the Last item in memory
+	// to remove UNDERLINE OF Stack<String>, NEED to import utility
+		Stack<String> stk = new Stack<String>();
+		
+		stk.add("rajendra");
+		stk.add("dijendra");
+		stk.add("sapin");
+		stk.add("uttar");
+		stk.add("nepal");
+		stk.add("kalam");
+		stk.add("nikhil");
+		stk.add("kutub");
+		stk.add("samir");
+		stk.add("sumon");
+		stk.add("rai");
+		stk.add("emran");
+// Stack is an implementation of vector. the default capacity is 10
+// If it has 11 item then size will be jump to 20 in memory
+		System.out.println(stk);
+		System.out.println(stk.capacity());
+		System.out.println(stk.size());
+		
+		stk.pop();
+		System.out.println(stk);
+		System.out.println(stk.pop());
+		System.out.println(stk.peek());
+		
+Collections.sort(stk); 
+// to sort by asc order, // remove redmark by importing java.util
+Collections.sort(stk, Collections.reverseOrder()); // desc order	
+System.out.println(stk);
+	
+	System.out.println(stk.empty());
+		}
+	}
